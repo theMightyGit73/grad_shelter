@@ -1,0 +1,169 @@
+/* ==================================== */
+/* 1. CORE LAYOUT AND TYPOGRAPHY FIXES */
+/* ==================================== */
+
+body {
+    /* Reset margin and use a slightly better font */
+    margin: 0;
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f9; /* Light background */
+    color: #333;
+}
+
+/* Styles for the main content area below the nav */
+main {
+    padding: 20px 40px; /* Add padding to separate content from screen edges */
+    max-width: 1200px; /* Keep content readable */
+    margin: 0 auto;
+}
+
+/* Styles for the application container (if you use one) */
+.app-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ==================================== */
+/* 2. HEADER AND NAVIGATION STYLES FIX */
+/* ==================================== */
+
+/* Styling for the Header component's <header> tag */
+header {
+    background-color: #4a55a2; /* Darker background for the header area */
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    margin-bottom: 0; /* Important: removes the default margin causing a gap */
+    border-bottom: none; 
+}
+
+header h1 {
+    color: white;
+}
+
+/* Styling for the navigation links container */
+nav {
+    display: flex;
+    padding: 10px 40px; 
+    background-color: #ffffff; /* White background for the nav bar */
+    border-bottom: 1px solid #ddd;
+    gap: 20px; /* Spacing between the links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a55a2; 
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+nav a:hover {
+    color: #1f3792;
+}
+
+
+/* ==================================== */
+/* 3. COMPONENT STYLING (Your Provided Code) */
+/* ==================================== */
+
+h1 {
+  color: #0056b3;
+}
+
+.stats-bar {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.resident-list {
+  display: grid;
+  gap: 20px;
+  /* Creates responsive columns: at least 250px wide, 1fr available space */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.resident-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  position: relative;
+}
+
+.resident-card h3 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* NOTE: You need to apply 'available' or 'adopted' class based on resident.available boolean */
+/* Example: className={`status-badge ${resident.available ? 'available' : 'adopted'}`} */
+.status-badge.available {
+  background-color: #2ecc71; /* Green */
+  color: white;
+}
+
+.status-badge.adopted {
+  background-color: #95a5a6; /* Grey */
+  color: white;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  grid-column: 1 / -1; /* Spans the entire width of the grid */
+}
+
+.controls-bar {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.controls-bar button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.card-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.adopt-btn, .delete-btn {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.adopt-btn {
+  background-color: #28a745;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+}

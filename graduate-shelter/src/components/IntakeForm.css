@@ -1,0 +1,35 @@
+.intake-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.intake-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.intake-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.intake-form button:disabled {
+  background-color: #a0c4ff;
+  cursor: not-allowed;
+}
+
+.intake-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
